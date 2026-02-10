@@ -227,6 +227,35 @@ body {
     background: white;
 }
 
+.tier-header {
+    text-align: center;
+    margin: 64px 0 40px;
+    padding-top: 48px;
+    border-top: 2px solid var(--border);
+}
+
+.tier-header:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.tier-header.free-tier {
+    margin-top: 80px;
+}
+
+.tier-header h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.tier-header p {
+    font-size: 16px;
+    color: var(--text-light);
+}
+
 .section-header {
     text-align: center;
     margin-bottom: 64px;
@@ -250,6 +279,10 @@ body {
     gap: 32px;
 }
 
+.free-grid {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+
 .feature-card {
     padding: 36px;
     background: white;
@@ -257,12 +290,51 @@ body {
     border: 1px solid var(--border);
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px var(--shadow);
+    position: relative;
+}
+
+.feature-card.premium {
+    border-color: var(--primary-light);
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.02) 0%, white 100%);
+}
+
+.feature-card.free {
+    border-color: var(--border);
+    background: var(--bg-light);
 }
 
 .feature-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 16px 32px rgba(79, 70, 229, 0.15);
     border-color: var(--primary-light);
+}
+
+.premium-badge-small {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.free-badge-small {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--success);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .feature-icon {
@@ -416,6 +488,21 @@ body {
 
 .dom-credentials li:last-child {
     border-bottom: none;
+}
+
+.dom-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dom-photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 12px 32px var(--shadow-hover);
+    object-fit: cover;
 }
 
 .placeholder-image {
@@ -594,10 +681,17 @@ body {
 
 .trust-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
-    max-width: 1000px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    max-width: 1100px;
     margin: 0 auto;
+}
+
+@media (max-width: 968px) {
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
 }
 
 .trust-item {

@@ -877,10 +877,25 @@ body {
     .hero-stats {
         flex-direction: column;
         gap: 24px;
+        padding: 24px 16px;
+        margin-bottom: 32px;
+    }
+    
+    .stat {
+        padding: 0;
+    }
+    
+    .stat-number {
+        font-size: 32px;
+    }
+    
+    .stat-label {
+        font-size: 13px;
     }
 
     .cta-buttons {
         flex-direction: column;
+        padding: 0 16px;
     }
 
     .btn {
@@ -891,6 +906,7 @@ body {
     .trust-indicators {
         flex-direction: column;
         gap: 12px;
+        padding: 0 16px;
     }
 
     .features-grid,
@@ -907,6 +923,7 @@ body {
     .stats-banner {
         flex-direction: column;
         gap: 32px;
+        padding: 32px 24px;
     }
 
     .nav-links {
@@ -932,6 +949,37 @@ body {
     .footer-content {
         flex-direction: column;
         gap: 32px;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
+    
+    .hero {
+        padding: 120px 0 60px;
+    }
+    
+    .hero-content {
+        padding: 0 16px;
+    }
+    
+    .badge {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+    
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 8px;
+    }
+    
+    .tier-header h3 {
+        font-size: 24px;
+    }
+    
+    .tier-header {
+        padding: 0 16px;
     }
 }
 
